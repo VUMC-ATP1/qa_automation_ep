@@ -1,5 +1,6 @@
 package pageObjectsHomework;
 
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -17,14 +18,16 @@ public class InventoryPage {
     private final By addToCart = By.id("add-to-cart-sauce-labs-backpack");
     private final By shoppingCart = By.id("shopping_cart_container");
 
-public void selectBackpackItem() {
+@Then("I select backpack item")
+    public void selectBackpackItem() {
     driver.findElement(backpackItem).click();
 }
-
+@Then("I click add to cart")
 public void clickAddToCart() {
     driver.findElement(addToCart).click();
 }
 
+@Then("I click to shopping cart")
 public void clickToShoppingCart() {
     driver.findElement(shoppingCart).click();
 }
